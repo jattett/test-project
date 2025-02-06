@@ -16,7 +16,7 @@ export const ModalContent = styled.div<{
   background-color: rgb(39, 39, 42);
   border-radius: 20px;
   padding: 40px 30px;
-  height: ${(props) => (props.deviceType === 'mobile' ? '100vh' : 'calc(100vh - 50px)')};
+  height: ${(props) => (props.deviceType === 'mobile' ? '100dvh' : 'calc(100vh - 50px)')};
   max-width: ${(props) => (props.deviceType === 'mobile' ? 'initial' : '650px')};
   width: ${(props) => {
     switch (props.deviceType) {
@@ -116,9 +116,9 @@ export const CommentModalStyle = styled.div<{
   height: ${(props) => {
     switch (props.deviceType) {
       case 'mobile':
-        return '80vh';
+        return '80dvh';
       case 'tablet':
-        return '80vh';
+        return '80dvh';
       case 'desktop':
       default:
         return 'calc(100vh - 50px)';
