@@ -8,7 +8,7 @@ interface OptionProps {
 
 const Option: React.FC<OptionProps> = ({ onPromptGenerated }) => {
   const fetchPromptFromGoogleAI = async () => {
-    const API_KEY = '';
+    const API_KEY = process.env.GEMINI_API_KEY;
 
     if (!API_KEY) {
       console.error('API 키가 설정되지 않았습니다.');
