@@ -40,7 +40,7 @@ export const ModalStyle = styled.div<{ openComment: boolean; deviceType: string 
   }};
   max-width: 650px;
   flex-shrink: 0;
-  height: ${(props) => (props.deviceType === 'mobile' ? '100dvh' : 'calc(100vh - 50px)')};
+  height: ${(props) => (props.deviceType === 'mobile' ? '100vh' : 'calc(100vh - 50px)')};
   background-color: rgb(39, 39, 42);
   border-radius: ${({ openComment, deviceType }) =>
     deviceType === 'mobile' ? '0' : openComment ? '20px 0 0 20px' : '20px'};
@@ -80,6 +80,7 @@ export const ModalStyle = styled.div<{ openComment: boolean; deviceType: string 
       align-items: center;
       justify-content: center;
       .article-wrapper {
+        padding-top: 10px;
         display: flex;
         justify-content: center;
         gap: 10px;
@@ -132,7 +133,6 @@ export const ImageWrapper = styled.div`
     height: 40vh;
     max-height: 100%;
     border-radius: 10px;
-    margin-bottom: 10px;
   }
 
   .info-wrpper {
@@ -247,9 +247,9 @@ export const CommentModalStyle = styled.div<{ openComment: boolean; deviceType: 
   height: ${(props) => {
     switch (props.deviceType) {
       case 'mobile':
-        return '70dvh';
+        return '70vh';
       case 'tablet':
-        return '70dvh';
+        return '70vh';
       case 'desktop':
       default:
         return 'calc(100vh - 50px)';
